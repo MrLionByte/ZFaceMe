@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Video Chat App</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="header">
+        <h3 id="label-username">VIDEO CHAT</h3>
+        <div class="join-container">
+            <input type="text" id="username" placeholder="Enter your name">
+            <button id="btn-join"><i class="fas fa-sign-in-alt"></i> Join Room</button>
+        </div>
+    </div>
+    
+    <div class="main-grid-container">
+        <div class="video-section">
+            <div id="video-container">
+                <div class="video-wrapper">
+                    <video id="local-video" autoplay playsinline muted></video>
+                    <div class="participant-name">You</div>
+                </div>
+                <!-- Remote videos will be added here by JavaScript -->
+            </div>
+            
+            <div class="controls">
+                <button id="btn-toggle-audio"><i class="fas fa-microphone"></i> Audio</button>
+                <button id="btn-toggle-video"><i class="fas fa-video"></i> Video</button>
+                <button id="btn-share-screen"><i class="fas fa-desktop"></i> Share Screen</button>
+                <button id="btn-leave-chat" class="leave-btn"><i class="fas fa-sign-out-alt"></i> Leave Chat</button>
+            </div>
+        </div>
+
+        <div id="chat">
+            <h3><i class="fas fa-comments"></i> Chat</h3>
+            <div id="messages">
+                <ul id="message-list"></ul>
+            </div>
+            <div class="message-input-container">
+                <input type="text" id="msg" placeholder="Type a message...">
+                <button id="btn-send-msg"><i class="fas fa-paper-plane"></i> Send</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>

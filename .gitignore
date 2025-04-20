@@ -1,0 +1,29 @@
+# Byte-compiled / cache
+**/__pycache__/
+**/*.py[cod]
+*.py[cod]
+
+# SQLite database
+db.sqlite3
+
+# Django migrations (ignore all except __init__.py if needed)
+**/migrations/
+!*/migrations/__init__.py
+
+# Static files (you might want to ignore if generated)
+static/
+
+# Local settings or secrets
+.env
+.venv
+venv
+
+# VS Code settings
+.vscode/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Others
+*.log
