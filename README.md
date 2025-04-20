@@ -78,8 +78,6 @@ ZFaceMe/
 │   ├── templates/
 │   ├── static/
 │   └── views.py
-├── static/             # JS, CSS, and assets
-├── templates/          # HTML files
 ├── manage.py
 └── requirements.txt
 ```
